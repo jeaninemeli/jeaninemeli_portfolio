@@ -129,8 +129,8 @@ body{
 }
 
 .about-content {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 15rem;
+    margin-right: 15rem;
 }
 
 #about .about-text {
@@ -221,7 +221,7 @@ body{
 
 .image-gallery {
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
     grid-template-rows: auto;
     grid-gap: 1.5rem;
     grid-template-areas: 
@@ -507,16 +507,70 @@ body{
 @media (max-width: 1080px) {
     .boxes {
         display: block !important;
-        margin-left: 5rem;
-        margin-right: 5rem;
+        width: 100%;
+        margin-left: 0rem;
+        margin-right: 0rem;
     }
     .box {
-        margin-bottom: 2rem !important;
+        margin: 0 0 2rem 0 !important;
+        padding: 2rem;
+    }
+    .image-gallery {
+        display:grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 1.5rem;
+        grid-template-areas: 
+            'img-1 img-2'
+            'img-3 img-4'
+            'img-5 img-6'
+            'img-7 img-8'
+            'img-9 img-10'
+            'img-11 img-12'
+            'img-13 img-14'
+            'img-15 img-16'
+            'img-17 img-18'
+            'img-19 img-20'
+            'img-21 img-22'
+            'img-23 img-24'
+            'img-25 img-26'
+            'img-27 img-28';  
     }
     
+    #about .about-content {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        display: block;
+    }
+    #about .about-image img {
+        margin: 1rem 0 0 0;
+        width: 100%;
+    }
+    
+    #services .box i {
+        margin-bottom: 0;
+    }
+    .feature {
+        margin-bottom: 1rem;
+    }
+    .feature span {
+        display: block;
+    }
+    #contact .mail-icon {
+        display: none;
+    }
+    #contact h2 {
+        margin-bottom: 3rem;
+    }
+    
+    
     #contact .form-box{
-        margin-left: 5rem;
-        margin-right: 5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    
+    #contact .contact-btn{
+        padding: 1rem;
     }
 }
 
